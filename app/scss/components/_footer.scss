@@ -1,0 +1,217 @@
+.footer {
+	color: #fff;
+	padding-bottom: 30px;
+
+	&__inner {
+		// display: flex;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		justify-content: space-between;
+
+		@include mq ('tablet-2'){
+			grid-template-columns: repeat(2, 1fr);
+			row-gap: 20px;
+		}
+
+		@include mq ('phone'){
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__descr {
+		padding: 10px;
+		margin-right: 40px;
+
+		@include mq ('phone'){
+			margin-right: 0;
+		}
+	}
+
+	&__img {
+		margin: 0 auto 20px;
+	}
+}
+
+
+.social {
+	display: flex;
+	margin-bottom: 50px;
+
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		outline: 0;
+
+		&:not(:last-child) {
+			margin-right: 13px;
+		}
+
+	}
+
+	&__link {
+		background-color: $accent;
+		width: 32px;
+		height: 32px;
+		outline: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+
+		&:hover {
+			box-shadow: inset 0 0 0 100px rgba($dark, 0.2);
+		}
+
+	}
+
+	&__icon {
+		width: 16px;
+		height: 16px;
+		mask-size: contain;
+		mask-position: center;
+		mask-repeat: no-repeat;
+		background-color: #fff;
+		display: block;
+		transition: background-color 0.5s ease-in-out
+	}
+
+}
+
+.contacts {
+	font-style: normal;
+	padding: 10px;
+
+	&__title {
+		font-size: 28px;
+		line-height: 1;
+		margin-bottom: 15px;
+	}
+
+	&__list {
+		color: #fff;
+
+	}
+
+	&__item {
+		margin-bottom: 10px;
+	}
+
+	&__link {
+		padding-left: 31px;
+		outline: 0;
+		display: block;
+		position: relative;
+		transition: box-shadow 0.5s ease-in-out, color 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+
+		&::before {
+			@include pseudo;
+			mask-repeat: no-repeat;
+			mask-position: center;
+			mask-size: contain;
+			background-color: $accent;
+			width: 24px;
+			height: 24px;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			transition: background-color 0.5s ease-in-out;
+		}
+
+		&--address::before {
+			mask-image: url('../images/sprite.svg#location');
+		}
+
+		&--phone::before {
+			mask-image: url('../images/sprite.svg#calling');
+		}
+
+		&--mail::before {
+			mask-image: url('../images/sprite.svg#message');
+		}
+
+		
+
+	}
+}
+
+.info {
+	padding: 10px;
+
+	&__title {
+		font-size: 28px;
+		line-height: 1;
+		margin-bottom: 15px;
+	}
+
+	&__item {
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__link {
+		padding-left: 23px;
+		color: $accent;
+		position: relative;
+		transition: color 0.5s ease-in-out;
+		white-space: nowrap;
+
+		&::before {
+			@include pseudo;
+			width: 18px;
+			height: 14px;
+			background-color: $accent;
+			mask-image: url(../images/arrow-next.svg);
+			mask-position: center;
+			mask-size: cover;
+			mask-repeat: no-repeat;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+
+.subscribe-form {
+	padding: 10px;
+	font-family: 'Roboto';
+	font-weight: 400;
+
+	&__title {
+		font-size: 28px;
+		line-height: 1;
+		margin-bottom: 15px;
+	}
+
+	&__text {
+		margin-bottom: 15px;
+	}
+
+	&__label {
+		display: block;
+		margin-bottom: 8px;
+	}
+
+	&__btn {
+		padding: 12px 10px;
+		border-radius: 2px;
+		background-color: $accent;
+		color: #fff;
+		font-size: 14px;
+		font-weight: 500;
+		outline: 0;
+		transition: box-shadow 0.3s ease-in-out;
+    
+	&:hover {
+		box-shadow: inset 0 0 0 100px rgba($dark, 0.2);
+	}
+
+	}
+}

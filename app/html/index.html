@@ -1,10 +1,17 @@
 @include('components/_head.html', {
-  "page": "Главная"
+  "page": "Головна"
 })
-
+@include('components/_header.html')
   <main class="main">
-
+    @include('components/_introduction.html')
+    @include('components/_about.html')
+    @include('components/_hours.html')
+    @include('components/_services.html')
+    @include('components/_pricing.html')
+    @include('components/_consultation.html')
+    @include('components/_review.html')
+    @include('components/_booking-home.html')
   </main>
 
-
+  @include('components/_footer.html')
 @include('components/_footer-scripts.html')

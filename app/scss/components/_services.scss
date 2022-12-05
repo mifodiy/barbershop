@@ -1,0 +1,55 @@
+.services {
+  padding: 50px 0 130px;
+  background-color: #fff;
+
+  @include mq('tablet') {
+    padding-bottom: 70px;
+  }
+
+
+  &__title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: $dark;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    @include mq('tablet') {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 25%;
+    margin: 4px;
+    padding: 100px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include mq('tablet') {
+      flex-basis: 100%;
+      margin: 0;
+
+      &:not(:last-child){
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__link{
+    font-family: 'OpenSans-Condensed', 'Aria', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1;
+    padding: 10px 32px;
+    text-transform: uppercase;
+  }
+
+}

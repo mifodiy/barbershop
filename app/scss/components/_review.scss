@@ -1,0 +1,85 @@
+.review {
+  padding: 110px 0;
+  color: #fff;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+  position: relative;
+  background-image: url('../images/review-bg.jpg');
+
+  @include mq('tablet') {
+    padding: 50px 0;
+    background-attachment: scroll;
+  }
+
+  &__title {
+    margin-bottom: 95px;
+
+    @include mq('tablet') {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__descr {
+    max-width: 530px;
+    margin-bottom: 75px;
+
+    @include mq('tablet') {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 15px;
+
+    @include mq('tablet') {
+      flex-direction: column;
+    }
+  }
+}
+
+.review-card {
+  max-width: 213px;
+  height: 325px;
+  border: 1px solid #fff;
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include mq('tablet') {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  &__blockquote {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+
+  &__name {
+    display: block;
+  }
+
+  &__position {
+    font-size: 13px;
+    line-height: 1;
+  }
+}
