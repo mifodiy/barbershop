@@ -1,0 +1,57 @@
+.about-section {
+
+
+  &--white {
+    background-color: #fff;
+
+    .about-section__subtitle {
+      color: $dark;
+    }
+  }
+
+  &--black {
+    background-color: $dark;
+    color: #fff;
+  }
+
+  &__content {
+    padding: 70px 20px 60px;
+
+    @include mq('tablet') {
+      padding: 50px 15px 40px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 60px;
+
+    @include mq('tablet') {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 35px;
+  }
+
+  &__text {
+    column-count: 3;
+
+    @include mq('tablet') {
+      column-count: auto;
+
+      p {
+        margin-bottom: 25px;
+      }
+    }
+
+    p:nth-child(odd) {
+      margin-bottom: 25px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+}

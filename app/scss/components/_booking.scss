@@ -1,0 +1,22 @@
+.booking {
+  padding: 60px 0 80px;
+  background-color: $dark;
+  color: #fff;
+
+  @include mq('phone') {
+    padding: 40px 0 50px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-style: 69px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+
+    p:not(:last-child){
+      margin-bottom: 10px;
+    }
+  }
+}

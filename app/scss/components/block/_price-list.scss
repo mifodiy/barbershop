@@ -1,0 +1,50 @@
+.price-list {
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  @include mq('tablet-2') {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+    justify-items: center;
+  }
+
+  @include mq('tablet') {
+    grid-template-columns: 1fr;
+  }
+
+  &__item {
+    max-width: 235px;
+    width: 100%;
+    margin-right: 50px;
+
+    @include mq('tablet') {
+      max-width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__category {
+    font-family: 'OpenSans-Condensed', 'Aria', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+
+  &__box {
+    padding-bottom: 22px;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__name {
+    max-width: 175px;
+    padding-right: 5px;
+    //white-space: nowrap;
+  }
+}

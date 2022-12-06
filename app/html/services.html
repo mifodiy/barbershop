@@ -1,0 +1,18 @@
+@include('components/_head.html', {
+  "page": "Послуги"
+})
+@include('components/_header.html')
+  <main class="main">
+    @include('components/_top-section.html', {
+      "title" : "Послуги",
+      "class" : '"top-section"'
+    })
+    @include('components/_price.html')
+    @include('components/_about-section.html', {
+      "class" : '"about-section about-section--black"'
+    })
+    @include('components/_booking.html')
+  </main>
+
+  @include('components/_footer.html')
+@include('components/_footer-scripts.html')

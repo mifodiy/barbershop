@@ -1,0 +1,34 @@
+.top-section {
+  margin-top: -109px;
+  background-image: url('../images/about-page-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 500px rgba($color: #000000, $alpha: 0.5);
+  
+
+  &--booking {
+    background-image: url('../images/booking-bg.jpg');
+  }
+
+  &--contact {
+    background-image: url('../images/contact-bg.jpg');
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 86px;
+    line-height: 1;
+    padding: 240px 0 40px;
+    color: #fff;
+    text-transform: uppercase;
+
+    @include mq('tablet') {
+      font-size: 70px;
+    }
+
+    @include mq('phone') {
+      font-size: 40px;
+    }
+  }
+}
