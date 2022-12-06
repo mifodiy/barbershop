@@ -1,0 +1,45 @@
+.appointments {
+  padding: 80px 0 25px;
+  background-color: #fff;
+
+  @include mq('tablet') {
+    padding-top: 50px;
+  }
+
+  &__inner {
+    padding: 0 0 100px 175px;
+    border-bottom: 1px solid $dark;
+
+    @include mq('tablet-2') {
+      padding: 0 0 80px 0;
+    }
+
+    @include mq('tablet') {
+      padding: 0 0 50px 0;
+    }
+  }
+
+  &__title {
+    font-size: 79px;
+    margin-bottom: 20px;
+    color: $dark;
+
+    @include mq('tablet') {
+      font-size: 68px;
+    }
+  
+    @include mq('phone') {
+      font-size: 39px;
+    }
+  }
+
+  &__text {
+    margin-top: 50px;
+    max-width: 645px;
+    
+    p:not(:last-child) {
+      margin-bottom: 22px;
+    }
+  }
+
+}

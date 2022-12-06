@@ -1,0 +1,18 @@
+@include('components/_head.html', {
+  "page": "Контакти"
+})
+@include('components/_header.html')
+  <main class="main">
+    @include('components/_top-section.html', {
+      "title" : "Контакти",
+      "class" : '"top-section top-section--contact"'
+    })
+
+    @include('components/_contact.html')
+    @include('components/_map.html')
+    @include('components/_following.html')
+
+  </main>
+
+  @include('components/_footer.html')
+@include('components/_footer-scripts.html')
