@@ -1,7 +1,9 @@
 @include('components/_head.html', {
   "page": "Головна"
 })
-@include('components/_header.html')
+@include('components/_header.html', {
+  "page": "home"
+  })
   <main class="main">
     @include('components/_introduction.html')
     @include('components/_about.html')
